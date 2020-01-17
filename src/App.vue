@@ -31,12 +31,16 @@ export default {
     changeToUser: function(event) {
       this.page = event;
     }
+<<<<<<< HEAD
   },
   components: {
     UploadForm,
     LandingPage
   },
   methods: {}
+=======
+  }
+>>>>>>> 67fb4fc28a839a53d6880d830114d378d1ce77e9
 };
 </script>
 
