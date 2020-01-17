@@ -2,7 +2,7 @@
   <div class="container">
 	<form @submit.prevent="register" class="signUp">
 		<h3>Create Account</h3>
-		<p>Complete this form</br>
+		<p>Complete this form<br>
   to join.
 		</p>
     <input v-model="name" type="text" placeholder="Enter Name" reqired />
@@ -12,7 +12,7 @@
 		<button class="form-btn dx" type="submit">Sign Up</button>
 	</form>
 	<form @submit.prevent="login" class="signIn">
-		<h3>Welcome</br>Back !</h3>
+		<h3>Welcome<br>Back !</h3>
 		<button class="fb" type="button">Log In With Facebook</button>
 		<p>- or -</p>
 		<input v-model="email" type="email" placeholder="Enter Email" autocomplete='off' reqired />
