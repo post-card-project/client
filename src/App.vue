@@ -1,31 +1,26 @@
 <template>
   <div>
-    <!-- <UploadForm />
-    <LandingPage />-->
-    <!-- <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar>
-    <UserPostCard v-if="page === 'user'" />
-    <UploadForm /> -->
-    <UploadForm />
+    <LandingPage v-if="!isLogin" @set-login="setLogin" />
+    <HomePage v-if="isLogin" />
     <!-- <LandingPage /> -->
+    <!-- <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar> -->
+    <!-- <UserPostCard v-if="page === 'user'" /> -->
   </div>
 </template>
 
 <script>
-import UploadForm from "./components/UploadForm";
+import HomePage from "./views/HomePage";
 import LandingPage from "./components/LandingPage";
-import UserPostCard from "./views/UserPostCard";
-import navbar from "./components/navbar";
 
 export default {
   data: function() {
     return {
-      page: "user"
+      page: "user",
+      isLogin: false
     };
   },
   components: {
-    UserPostCard,
-    navbar,
-    UploadForm,
+    HomePage,
     LandingPage
   },
   methods: {
@@ -34,7 +29,14 @@ export default {
     },
     changeToUser: function(event) {
       this.page = event;
+    },
+    setLogin() {
+      this.isLogin = true
     }
+  },
+  created() {
+    if(localStorage.getItem('access_token')) this.isLogin = true
+    else this.isLogin = false
   }
 };
 </script>

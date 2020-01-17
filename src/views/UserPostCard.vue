@@ -66,7 +66,7 @@ export default {
             text: err.response.data
           });
         });
-    }
+    },
   }
 };
 </script>

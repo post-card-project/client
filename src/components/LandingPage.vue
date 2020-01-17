@@ -96,7 +96,9 @@ export default {
               icon: 'success',
               title: 'Success:',
               text: 'Welcome!'
-            })
+						})
+						localStorage.setItem('access_token', data.access_token)
+						this.$emit('set-login')
             this.resetForm()
           })
           .catch(err => {

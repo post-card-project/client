@@ -1,14 +1,14 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#" @click="goUser">Home</b-navbar-brand>
+      <b-navbar-brand href="#" @click="goCreate">Home</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#" @click="goHome">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
+          <b-nav-item href="#" @click="goHome">Postcard</b-nav-item>
+          <b-nav-item href="#" @click="goAll">All Postcard</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -19,10 +19,13 @@
 export default {
   methods: {
     goHome: function() {
-      this.$emit("goHome", "home");
+      this.$emit("changePage", "user");
     },
-    goUser: function() {
-      this.$emit("goUser", "user");
+    goAll: function() {
+      this.$emit("changePage", "all");
+    },
+    goCreate: function() {
+      this.$emit("changePage", "home");
     }
   },
   data: function() {

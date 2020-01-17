@@ -53,6 +53,9 @@ export default {
           image: null
       }
     },
+    components: {
+
+    },
     methods: {
       submit() {
         const formData = new FormData()
@@ -93,7 +96,7 @@ export default {
         this.address = ''
         this.message = ''
         this.sender = ''
-        this.image = ''
+        this.image = null
       }
     }
   }
