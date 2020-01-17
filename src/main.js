@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-import Vue from 'vue'
-import App from './App.vue'
-import axios from 'axios'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-Vue.prototype.$axios = axios
-=======
 import Vue from 'vue';
 import App from './App.vue';
 import axios from 'axios';
-
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 
 Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
-
 Vue.prototype.$axios = axios;
->>>>>>> fitur postcard user done + navbar
 
 new Vue({
 	render : (h) => h(App)
