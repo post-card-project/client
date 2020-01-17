@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- <UploadForm />
+    <UploadForm />
     <LandingPage />
     <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar>
-    <UserPostCard v-if="page === 'user'"></UserPostCard>-->
+    <UserPostCard v-if="page === 'user'"></UserPostCard>
   </div>
 </template>
 
