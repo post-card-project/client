@@ -4,10 +4,10 @@
         <div id="overlay">
             <img v-bind:src="post.editedImage" class="card-img-top d-flex justify-content-center" alt="..." id="image2">
         </div>
-        <h1 class="display-6">{{ post.name}}</h1>
-        <p class="lead">{{ post.message}}</p>
+        <h3 class="display-6">{{ post.name }}</h3>
+        <p class="lead">{{ post.message }}</p>
         <hr class="my-2">
-        <p>{{ post.address}}</p>
+        <p>{{ post.location }}</p>
         <a class="btn btn-primary btn-lg" href="" role="button" v-on:click.prevent="allpostcards">Back...</a>
     </div>
 </template>

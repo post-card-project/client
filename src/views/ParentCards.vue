@@ -1,5 +1,5 @@
 <template>
-    <div class="row ml-2">
+    <div class="row ml-2" id="parentCard">
         <child-card 
             v-for="postcard in postcardList"
             v-bind:key="postcard._id"
@@ -60,5 +60,7 @@ export default {
 </script>
 
 <style scoped>
-
+#parentCard {
+    background-color: antiquewhite
+}
 </style>
