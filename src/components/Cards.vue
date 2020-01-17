@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="article" style="heigth: 280px">
-      <div class="pl-2" style="background-color: blue; border-radius: 10px">
+      <div class="pl-2" style="background-color: cornflowerblue; border-radius: 10px">
         <h3>From : {{kartu.sender}}</h3>
         <h3>To : {{kartu.name}}</h3>
         <p>Message : {{kartu.message}}</p>

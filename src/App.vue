@@ -1,9 +1,9 @@
 <template>
   <div>
-    <UploadForm />
-    <LandingPage />
+    <!-- <UploadForm />
+    <LandingPage />-->
     <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar>
-    <UserPostCard v-if="page === 'user'"></UserPostCard>
+    <UserPostCard v-if="page === 'user'" />
   </div>
 </template>
 
@@ -21,26 +21,18 @@ export default {
   },
   components: {
     UserPostCard,
-    navbar
+    navbar,
+    UploadForm,
+    LandingPage
   },
   methods: {
     changeToHome: function(event) {
       this.page = event;
-      console.log(this.page);
     },
     changeToUser: function(event) {
       this.page = event;
     }
-<<<<<<< HEAD
-  },
-  components: {
-    UploadForm,
-    LandingPage
-  },
-  methods: {}
-=======
   }
->>>>>>> 67fb4fc28a839a53d6880d830114d378d1ce77e9
 };
 </script>
 

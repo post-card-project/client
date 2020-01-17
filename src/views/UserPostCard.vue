@@ -37,9 +37,7 @@ export default {
         }
       })
         .then(({ data }) => {
-          data.forEach(element => {
-            this.cards.push(element);
-          });
+          this.cards = data;
         })
         .catch(err => {});
     },
@@ -54,9 +52,19 @@ export default {
       })
         .then(({ data }) => {
           this.findAll();
+          Swal.fire({
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+          });
         })
         .catch(err => {
-          console.log(err);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: err.response.data
+          });
         });
     }
   }
