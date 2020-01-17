@@ -2,9 +2,9 @@
 <div id="body">
 <div class="container">
   <h1>Create a postcard!</h1><br><br>
+<form @submit.prevent="submit">
 <div class="row">
   <div class="col-sm-6">
-  <form @submit.prevent="submit">
   Sender:<br>
     <input v-model="sender" type="text" name="sender" value="Jane">
   </div>
@@ -32,9 +32,9 @@
   </div>
   <div class="col-sm-6">
     <input type="submit" value="Submit" class="submit">
-</form>
   </div>
 </div>
+ </form>
 </div>
   </div>
 </template>
