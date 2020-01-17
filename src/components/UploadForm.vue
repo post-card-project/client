@@ -28,7 +28,9 @@
 <div class="row">
   <div class="col-sm-6">
     Image:<br>
-    <input type="file" name="image" value="">
+    <div class="input-group mb-3">
+     <b-form-file v-model="image" class="mt-3" plain></b-form-file>
+    </div>
   </div>
   <div class="col-sm-6">
     <input type="submit" value="Submit" class="submit">
@@ -44,27 +46,26 @@ const baseUrl = 'http://localhost:3000'
 export default {
     data: function() {
       return {
-        form: {
           name: '',
           address: '',
           message: '',
           sender: '',
-          image: ''
-        }
+          image: null
       }
     },
     methods: {
       submit() {
+        const formData = new FormData()
+        formData.append('image',this.image)
+        formData.set('name', this.name)
+        formData.set('address', this.address)
+        formData.set('message', this.message)
+        formData.set('sender', this.sender)
+
         axios({
-          url: `baseUrl/postcards`,
+          url: `${baseUrl}/postcards`,
           method: 'POST',
-          data: {
-            name: this.name,
-            address: this.address,
-            message: this.message,
-            sender: this.sender,
-            image: this.image
-          },
+          data: formData,
           headers: {
             access_token: localStorage.getItem('access_token')
           }
@@ -84,6 +85,7 @@ export default {
               title: 'Error:',
               text: err
             })
+            this.resetForm()
           })
       },
       resetForm() {

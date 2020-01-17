@@ -1,7 +1,7 @@
 <template>
   <div>
-    <!-- <UploadForm /> -->
-    <LandingPage />
+    <UploadForm />
+    <!-- <LandingPage /> -->
   </div>
 </template>
 
