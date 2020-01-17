@@ -2,8 +2,10 @@
   <div>
     <!-- <UploadForm />
     <LandingPage />-->
-    <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar>
+    <!-- <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar>
     <UserPostCard v-if="page === 'user'" />
+    <UploadForm /> -->
+    <!-- <LandingPage /> -->
   </div>
 </template>
 
