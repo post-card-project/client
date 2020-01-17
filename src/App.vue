@@ -1,10 +1,14 @@
 <template>
   <div>
+<<<<<<< HEAD
     <!-- <UploadForm />
     <LandingPage />-->
     <!-- <navbar @goHome="changeToHome($event)" @goUser="changeToUser($event)"></navbar>
     <UserPostCard v-if="page === 'user'" />
     <UploadForm /> -->
+=======
+    <UploadForm />
+>>>>>>> 11375d56c7d67d621677b63b3d5676b222eab453
     <!-- <LandingPage /> -->
   </div>
 </template>
